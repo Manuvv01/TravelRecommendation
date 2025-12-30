@@ -37,10 +37,6 @@ document.getElementById("searchBtn").addEventListener("click", () => {
     .catch(error => console.error("Fetch error:", error));
 });
 
-
-
-
-
 //SEARCH
 const resultsDiv = document.getElementById("results");
 
@@ -49,10 +45,10 @@ document.getElementById("searchBtn").addEventListener("click", () => {
     .trim()
     .toLowerCase();
 
-  resultsDiv.innerHTML = ""; // clear previous results
+  resultsDiv.innerHTML = ""; // clear previous results in HTML
 
   fetch("travel_recommendation_api.json")
-    .then(res => res.json())
+    .then(res => res.json()) 
     .then(data => {
 
       if (keyword === "beach" || keyword === "beaches") {
